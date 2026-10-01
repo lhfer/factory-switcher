@@ -168,18 +168,9 @@ service `local.FactorySwitcher.keys` in Keychain Access. This drops all switcher
 
 ## 🏗️ Under the hood
 
-```mermaid
-flowchart LR
-    UI["FactorySwitcher<br/>AppKit menu · login terminal · quit/relaunch"] --> Core
-    subgraph Core["SwitcherCore"]
-        E["SwitcherEngine<br/>transaction + journal"] --> S["AccountStore<br/>encrypted snapshots"]
-        E --> B["Backups<br/>verify · restore"]
-        E --> Q["QuotaClient<br/>limits · refresh"]
-        E --> X["Sessions<br/>selected org markers"]
-    end
-    S --> K[("macOS Keychain")]
-    Q --> API(["Official Factory API"])
-```
+<div align="center">
+  <img src="assets/arch.svg" alt="Architecture: AppKit app → SwitcherCore (engine, account store, backups, quota client, sessions) → macOS Keychain and the official Factory API" width="100%">
+</div>
 
 - **43 XCTests** with synthetic JWTs, an in-memory keychain, fake process/network layers and temp directories —
   covering AES-GCM interop, file permissions/locks/symlinks, rollback on every failure point, crash recovery,

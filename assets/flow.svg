@@ -3,7 +3,7 @@
 <defs>
   <linearGradient id="bg" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#0b1022"/><stop offset="1" stop-color="#160f3a"/></linearGradient>
   <linearGradient id="node" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8b5cf6"/><stop offset="1" stop-color="#06b6d4"/></linearGradient>
-  <linearGradient id="line" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#8b5cf6"/><stop offset="1" stop-color="#22d3ee"/></linearGradient>
+  <linearGradient id="line" gradientUnits="userSpaceOnUse" x1="120" y1="0" x2="1160" y2="0"><stop offset="0" stop-color="#8b5cf6"/><stop offset="1" stop-color="#22d3ee"/></linearGradient>
   <clipPath id="clip"><rect width="1280" height="360" rx="22"/></clipPath>
 </defs>
 <style>
@@ -11,15 +11,12 @@
   .n0 { animation: n0 8s ease-out infinite; transform-origin: 120.0px 150px; } @keyframes n0 { 0%, 6% { opacity: 0; transform: scale(.6); } 10% { opacity: 1; transform: scale(1.12); } 14%, 92% { opacity: 1; transform: none; } 100% { opacity: 0; } } .n1 { animation: n1 8s ease-out infinite; transform-origin: 380.0px 150px; } @keyframes n1 { 0%, 22% { opacity: 0; transform: scale(.6); } 26% { opacity: 1; transform: scale(1.12); } 30%, 92% { opacity: 1; transform: none; } 100% { opacity: 0; } } .n2 { animation: n2 8s ease-out infinite; transform-origin: 640.0px 150px; } @keyframes n2 { 0%, 38% { opacity: 0; transform: scale(.6); } 42% { opacity: 1; transform: scale(1.12); } 46%, 92% { opacity: 1; transform: none; } 100% { opacity: 0; } } .n3 { animation: n3 8s ease-out infinite; transform-origin: 900.0px 150px; } @keyframes n3 { 0%, 54% { opacity: 0; transform: scale(.6); } 58% { opacity: 1; transform: scale(1.12); } 62%, 92% { opacity: 1; transform: none; } 100% { opacity: 0; } } .n4 { animation: n4 8s ease-out infinite; transform-origin: 1160.0px 150px; } @keyframes n4 { 0%, 70% { opacity: 0; transform: scale(.6); } 74% { opacity: 1; transform: scale(1.12); } 78%, 92% { opacity: 1; transform: none; } 100% { opacity: 0; } }
   .track { stroke-dasharray: 1040; animation: track 8s ease-in-out infinite; }
   @keyframes track { 0%, 6% { stroke-dashoffset: 1040; } 74% { stroke-dashoffset: 0; } 92% { stroke-dashoffset: 0; opacity: 1; } 100% { stroke-dashoffset: 0; opacity: 0; } }
-  .rb { stroke-dasharray: 8 8; animation: rb 1.2s linear infinite; }
-  @keyframes rb { to { stroke-dashoffset: -32; } }
 </style>
 <g clip-path="url(#clip)">
   <rect width="1280" height="360" fill="url(#bg)"/>
   <text x="40" y="48" font-size="15" font-weight="700" letter-spacing="1.5" fill="#c4b5fd">WHAT HAPPENS WHEN YOU CLICK AN ACCOUNT · 点击账号后发生什么</text>
   <line x1="120" y1="150" x2="1160" y2="150" stroke="#ffffff" stroke-opacity=".1" stroke-width="4" stroke-linecap="round"/>
   <line class="track" x1="120" y1="150" x2="1160" y2="150" stroke="url(#line)" stroke-width="4" stroke-linecap="round"/>
-  <path class="rb" d="M900.0 194 C 900.0 325, 380.0 325, 380.0 270" fill="none" stroke="#fb7185" stroke-opacity=".75" stroke-width="2.2" transform="translate(0 0)" opacity="0"/>
   <g>
   <circle cx="120.0" cy="150" r="34" fill="#1e1b4b" stroke="#ffffff" stroke-opacity=".15" stroke-width="2"/>
   <g class="n0"><circle cx="120.0" cy="150" r="34" fill="url(#node)"/><circle cx="120.0" cy="150" r="44" fill="none" stroke="#a78bfa" stroke-opacity=".35" stroke-width="2"/></g>

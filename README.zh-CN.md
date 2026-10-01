@@ -163,18 +163,9 @@ bash scripts/build-app.sh   # 输出 dist/FactorySwitcher.app
 
 ## 🏗️ 实现概览
 
-```mermaid
-flowchart LR
-    UI["FactorySwitcher<br/>AppKit 菜单 · 登录终端 · 退出/重开"] --> Core
-    subgraph Core["SwitcherCore"]
-        E["SwitcherEngine<br/>事务 + 恢复日志"] --> S["AccountStore<br/>加密快照"]
-        E --> B["Backups<br/>校验 · 恢复"]
-        E --> Q["QuotaClient<br/>额度 · 续期"]
-        E --> X["Sessions<br/>所选会话组织标记"]
-    end
-    S --> K[("macOS 钥匙串")]
-    Q --> API(["Factory 官方接口"])
-```
+<div align="center">
+  <img src="assets/arch.svg" alt="架构：AppKit 应用 → SwitcherCore（引擎、账号存储、备份、额度、会话）→ macOS 钥匙串与 Factory 官方接口" width="100%">
+</div>
 
 - **43 项 XCTest**，全部使用模拟 JWT、内存钥匙串、假进程 / 网络层和临时目录。
   覆盖 AES-GCM 互通、文件权限 / 锁 / 符号链接、每个失败点的回滚、崩溃恢复、令牌轮换和选择性会话共享，
