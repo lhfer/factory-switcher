@@ -31,8 +31,10 @@ def esc(s):
 
 
 # --------------------------------------------------------------------------- hero
-def hero():
-    W, H = 1280, 440
+def hero(static=False):
+    """static=True renders a 1280x640 social-preview card without animation."""
+    W, H = (1280, 640) if static else (1280, 440)
+    dy = 100 if static else 0
     chips = ["Native Swift + AppKit", "≈ 1 MB", "Zero dependencies", "Encrypted snapshots", "43 tests passing"]
     fs = 17
     pad = 18
@@ -55,7 +57,7 @@ def hero():
         ("Back up first. Roll back automatically on failure.", "先备份再切换，失败自动回滚"),
     ]
     tag_svg = []
-    for i, (en, zh) in enumerate(lines):
+    for i, (en, zh) in enumerate(lines[:1] if static else lines):
         tag_svg.append(f'''<g class="tag" style="animation-delay:{i * 4}s">
   <text x="640" y="268" text-anchor="middle" font-size="27" font-weight="500" fill="#f5f3ff">{esc(en)}</text>
   <text x="640" y="306" text-anchor="middle" font-size="21" fill="#a5b4fc">{esc(zh)}</text>
@@ -77,7 +79,7 @@ def hero():
   <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
     <path d="M40 0H0V40" fill="none" stroke="#ffffff" stroke-opacity=".045"/>
   </pattern>
-  <clipPath id="clip"><rect width="{W}" height="{H}" rx="22"/></clipPath>
+  <clipPath id="clip"><rect width="{W}" height="{H}" rx="{0 if static else 22}"/></clipPath>
 </defs>
 <style>
   text {{ font-family: {FONT}; }}
@@ -127,6 +129,7 @@ def hero():
   <rect x="1145" y="14" width="17" height="7" rx="1.5" fill="#e5e7eb" fill-opacity=".85"/>
   <text x="1250" y="24" text-anchor="end" font-size="15" fill="#e5e7eb">9:41</text>
 
+  <g transform="translate(0 {dy})">
   <!-- title block -->
   <g class="fade-up">
     <rect x="455" y="92" width="370" height="32" rx="16" fill="#ffffff" fill-opacity=".08" stroke="#ffffff" stroke-opacity=".18"/>
@@ -140,10 +143,14 @@ def hero():
   </g>
   {''.join(tag_svg)}
   {''.join(chip_svg)}
+  </g>
   <rect class="shine" x="0" y="0" width="160" height="{H}" fill="#ffffff" fill-opacity=".035" transform="skewX(-20)"/>
 </g>
 </svg>
 '''
+    if static:
+        start, end = svg.index("<style>"), svg.index("</style>") + len("</style>")
+        svg = svg[:start] + "<style>text { font-family: " + FONT + "; }</style>" + svg[end:]
     return svg
 
 
@@ -537,3 +544,8 @@ for name, fn in [("hero.svg", hero), ("demo.svg", menu_demo), ("flow.svg", flow)
     with open(os.path.join(OUT, name), "w", encoding="utf-8") as f:
         f.write(fn())
     print("wrote", os.path.join(OUT, name))
+
+# Social-preview card (upload as PNG in repo Settings). Render it, e.g. with:
+#   chrome --headless=new --window-size=1280,640 --screenshot=assets/social-preview.png social-preview.svg
+with open(os.path.join(OUT, "social-preview.svg"), "w", encoding="utf-8") as f:
+    f.write(hero(static=True))
