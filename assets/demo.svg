@@ -1,0 +1,175 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="820" viewBox="0 0 1280 820" role="img" aria-label="Animated demo: switching Factory accounts from the menu bar">
+<title>Switching accounts from the menu bar</title>
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#0b1022"/><stop offset="1" stop-color="#160f3a"/>
+  </linearGradient>
+  <linearGradient id="wall" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#312e81"/><stop offset=".55" stop-color="#4c1d95"/><stop offset="1" stop-color="#0e7490"/>
+  </linearGradient>
+  <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="14" stdDeviation="18" flood-color="#000" flood-opacity=".55"/></filter>
+  <clipPath id="clip"><rect width="1280" height="820" rx="22"/></clipPath>
+  <clipPath id="scene"><rect x="600" y="40" width="640" height="740" rx="16"/></clipPath>
+</defs>
+<style>
+  text { font-family: -apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Hiragino Sans GB','Microsoft YaHei','Noto Sans CJK SC',Helvetica,Arial,sans-serif; }
+  .s0 { animation: ks0 14s linear infinite; } @keyframes ks0 { 0%, 25.5% { opacity: 1; } 27%, 100% { opacity: 0; } } .s1 { animation: ks1 14s linear infinite; } @keyframes ks1 { 0%, 27% { opacity: 0; } 28.5%, 42.5% { opacity: 1; } 44%, 100% { opacity: 0; } } .s2 { animation: ks2 14s linear infinite; } @keyframes ks2 { 0%, 44% { opacity: 0; } 45.5%, 72.5% { opacity: 1; } 74%, 100% { opacity: 0; } } .s3 { animation: ks3 14s linear infinite; } @keyframes ks3 { 0%, 74% { opacity: 0; } 75.5%, 97% { opacity: 1; } 100% { opacity: 0; } }
+  .pk0 { animation: pk0 14s linear infinite; } @keyframes pk0 { 0%, 47% { opacity: 0; transform: scale(.4); } 48.5%, 100% { opacity: 1; transform: none; } }.ps0 { animation: ps0 14s linear infinite; } @keyframes ps0 { 0%, 44% { opacity: .25; } 45%, 47% { opacity: 1; } 47.5%, 100% { opacity: 0; } } .pk1 { animation: pk1 14s linear infinite; } @keyframes pk1 { 0%, 53% { opacity: 0; transform: scale(.4); } 54.5%, 100% { opacity: 1; transform: none; } }.ps1 { animation: ps1 14s linear infinite; } @keyframes ps1 { 0%, 47% { opacity: .25; } 47.5%, 53% { opacity: 1; } 53.5%, 100% { opacity: 0; } } .pk2 { animation: pk2 14s linear infinite; } @keyframes pk2 { 0%, 59% { opacity: 0; transform: scale(.4); } 60.5%, 100% { opacity: 1; transform: none; } }.ps2 { animation: ps2 14s linear infinite; } @keyframes ps2 { 0%, 53% { opacity: .25; } 53.5%, 59% { opacity: 1; } 59.5%, 100% { opacity: 0; } } .pk3 { animation: pk3 14s linear infinite; } @keyframes pk3 { 0%, 65% { opacity: 0; transform: scale(.4); } 66.5%, 100% { opacity: 1; transform: none; } }.ps3 { animation: ps3 14s linear infinite; } @keyframes ps3 { 0%, 59% { opacity: .25; } 59.5%, 65% { opacity: 1; } 65.5%, 100% { opacity: 0; } }
+  .menu { animation: menu 14s linear infinite; }
+  @keyframes menu { 0% { opacity: 0; } 2%, 27% { opacity: 1; } 30%, 74% { opacity: 0; } 77%, 96% { opacity: 1; } 100% { opacity: 0; } }
+  .chkA { animation: chkA 14s linear infinite; }
+  @keyframes chkA { 0%, 50% { opacity: 1; } 51%, 100% { opacity: 0; } }
+  .chkB { animation: chkB 14s linear infinite; }
+  @keyframes chkB { 0%, 50% { opacity: 0; } 51%, 100% { opacity: 1; } }
+  .hover { animation: hover 14s linear infinite; }
+  @keyframes hover { 0%, 18% { opacity: 0; } 19%, 28% { opacity: 1; } 29%, 100% { opacity: 0; } }
+  .flash { animation: flash 14s linear infinite; }
+  @keyframes flash { 0%, 78% { opacity: 0; } 80% { opacity: .9; } 90%, 100% { opacity: 0; } }
+  .dlg { animation: dlg 14s cubic-bezier(.2,.8,.2,1) infinite; transform-origin: 920.0px 395.0px; }
+  @keyframes dlg { 0%, 29% { opacity: 0; transform: scale(.94); } 32%, 41.5% { opacity: 1; transform: none; } 43.5%, 100% { opacity: 0; transform: scale(.97); } }
+  .btn { animation: btn 14s linear infinite; }
+  @keyframes btn { 0%, 40.5% { fill: #0a84ff; } 41%, 42% { fill: #0060d0; } 42.5%, 100% { fill: #0a84ff; } }
+  .prog { animation: prog 14s cubic-bezier(.2,.8,.2,1) infinite; }
+  @keyframes prog { 0%, 43.5% { opacity: 0; transform: translateY(12px); } 46%, 73% { opacity: 1; transform: none; } 75.5%, 100% { opacity: 0; transform: translateY(-8px); } }
+  .spin { animation: spin .9s linear infinite; }
+  @keyframes spin { to { transform: rotate(360deg); } }
+  .fs { animation: fs 14s linear infinite; }
+  @keyframes fs { 0%, 43.5% { opacity: 1; } 44%, 74% { opacity: 0; } 74.5%, 100% { opacity: 1; } }
+  .fsb { animation: fsb 14s linear infinite; }
+  @keyframes fsb { 0%, 43.5% { opacity: 0; } 44%, 74% { opacity: 1; } 74.5%, 100% { opacity: 0; } }
+  .fsbg { animation: fsbg 14s linear infinite; }
+  @keyframes fsbg { 0%, 2% { fill-opacity: .18; } 3%, 27% { fill-opacity: .32; } 29%, 76% { fill-opacity: .18; } 77%, 96% { fill-opacity: .32; } 99%, 100% { fill-opacity: .18; } }
+  .cursor { animation: cur 14s cubic-bezier(.45,.05,.35,1) infinite; }
+  @keyframes cur { 0% { transform: translate(1160px, 740px); } 5% { transform: translate(1160px, 740px); } 19% { transform: translate(870px, 257px); } 25% { transform: translate(870px, 257px); } 34% { transform: translate(870px, 257px); } 40% { transform: translate(1081px, 498px); } 44% { transform: translate(1081px, 498px); } 56% { transform: translate(1160px, 740px); } 100% { transform: translate(1160px, 740px); } }
+  .click { animation: click 14s linear infinite; }
+  @keyframes click { 0%, 26% { opacity: 0; transform: scale(.3); } 26.5% { opacity: .9; transform: scale(.3); } 29% { opacity: 0; transform: scale(1.4); } 40.5% { opacity: 0; transform: scale(.3); } 41% { opacity: .9; transform: scale(.3); } 43.5% { opacity: 0; transform: scale(1.4); } 100% { opacity: 0; } }
+</style>
+<g clip-path="url(#clip)">
+  <rect width="1280" height="820" fill="url(#bg)"/>
+
+  <text x="56" y="104" font-size="34" font-weight="800" fill="#ffffff">Switch in four steps</text>
+  <text x="56" y="146" font-size="24" font-weight="600" fill="#a5b4fc">四步完成切换</text>
+  <text x="56" y="182" font-size="16" fill="#94a3b8">Never automatic — every switch is your click. · 从不自动切换</text>
+  <g>
+  <rect x="56" y="214" width="500" height="98" rx="16" fill="#ffffff" fill-opacity=".035" stroke="#ffffff" stroke-opacity=".08"/>
+  <g class="s0">
+    <rect x="56" y="214" width="500" height="98" rx="16" fill="#8b5cf6" fill-opacity=".16" stroke="#a78bfa" stroke-opacity=".9" stroke-width="1.5"/>
+    <rect x="56" y="232" width="4" height="62" rx="2" fill="#a78bfa"/>
+  </g>
+  <circle cx="106" cy="263" r="22" fill="#1e1b4b" stroke="#a78bfa" stroke-opacity=".6"/>
+  <text x="106" y="271" text-anchor="middle" font-size="21" font-weight="700" fill="#e9d5ff">1</text>
+  <text x="146" y="258" font-size="23" font-weight="650" fill="#ffffff">Pick an account</text>
+  <text x="146" y="289" font-size="19" fill="#a5b4fc">在菜单里点选账号</text>
+</g><g>
+  <rect x="56" y="332" width="500" height="98" rx="16" fill="#ffffff" fill-opacity=".035" stroke="#ffffff" stroke-opacity=".08"/>
+  <g class="s1">
+    <rect x="56" y="332" width="500" height="98" rx="16" fill="#8b5cf6" fill-opacity=".16" stroke="#a78bfa" stroke-opacity=".9" stroke-width="1.5"/>
+    <rect x="56" y="350" width="4" height="62" rx="2" fill="#a78bfa"/>
+  </g>
+  <circle cx="106" cy="381" r="22" fill="#1e1b4b" stroke="#a78bfa" stroke-opacity=".6"/>
+  <text x="106" y="389" text-anchor="middle" font-size="21" font-weight="700" fill="#e9d5ff">2</text>
+  <text x="146" y="376" font-size="23" font-weight="650" fill="#ffffff">Confirm the restart</text>
+  <text x="146" y="407" font-size="19" fill="#a5b4fc">确认重启 Factory</text>
+</g><g>
+  <rect x="56" y="450" width="500" height="98" rx="16" fill="#ffffff" fill-opacity=".035" stroke="#ffffff" stroke-opacity=".08"/>
+  <g class="s2">
+    <rect x="56" y="450" width="500" height="98" rx="16" fill="#8b5cf6" fill-opacity=".16" stroke="#a78bfa" stroke-opacity=".9" stroke-width="1.5"/>
+    <rect x="56" y="468" width="4" height="62" rx="2" fill="#a78bfa"/>
+  </g>
+  <circle cx="106" cy="499" r="22" fill="#1e1b4b" stroke="#a78bfa" stroke-opacity=".6"/>
+  <text x="106" y="507" text-anchor="middle" font-size="21" font-weight="700" fill="#e9d5ff">3</text>
+  <text x="146" y="494" font-size="23" font-weight="650" fill="#ffffff">Quit · back up · swap · relaunch</text>
+  <text x="146" y="525" font-size="19" fill="#a5b4fc">退出 · 备份 · 替换 · 重开</text>
+</g><g>
+  <rect x="56" y="568" width="500" height="98" rx="16" fill="#ffffff" fill-opacity=".035" stroke="#ffffff" stroke-opacity=".08"/>
+  <g class="s3">
+    <rect x="56" y="568" width="500" height="98" rx="16" fill="#8b5cf6" fill-opacity=".16" stroke="#a78bfa" stroke-opacity=".9" stroke-width="1.5"/>
+    <rect x="56" y="586" width="4" height="62" rx="2" fill="#a78bfa"/>
+  </g>
+  <circle cx="106" cy="617" r="22" fill="#1e1b4b" stroke="#a78bfa" stroke-opacity=".6"/>
+  <text x="106" y="625" text-anchor="middle" font-size="21" font-weight="700" fill="#e9d5ff">4</text>
+  <text x="146" y="612" font-size="23" font-weight="650" fill="#ffffff">Done — check email &amp; org</text>
+  <text x="146" y="643" font-size="19" fill="#a5b4fc">完成，核对邮箱与组织</text>
+</g>
+  <g>
+    <rect x="56" y="690" width="500" height="64" rx="14" fill="#10b981" fill-opacity=".1" stroke="#34d399" stroke-opacity=".45"/>
+    <path d="M86 708l14 6v10c0 8-6 13-14 16-8-3-14-8-14-16v-10z" fill="none" stroke="#34d399" stroke-width="2.2" stroke-linejoin="round"/>
+    <text x="120" y="717" font-size="17" font-weight="600" fill="#d1fae5">Any step fails → original login restored</text>
+    <text x="120" y="742" font-size="15" fill="#6ee7b7">任何一步失败，自动恢复原登录</text>
+  </g>
+
+  <!-- scene -->
+  <g clip-path="url(#scene)">
+    <rect x="600" y="40" width="640" height="740" fill="url(#wall)"/>
+    <rect x="600" y="40" width="640" height="740" fill="#000" fill-opacity=".25"/>
+    <rect x="600" y="40" width="640" height="34" fill="#18181b" fill-opacity=".72"/>
+    <rect class="fsbg" x="724" y="45" width="58" height="24" rx="6" fill="#ffffff" fill-opacity=".18"/>
+    <text class="fs" x="753" y="63" text-anchor="middle" font-size="15" font-weight="600" fill="#ffffff">FS</text>
+    <text class="fsb" x="753" y="63" text-anchor="middle" font-size="15" font-weight="600" fill="#ffffff">FS…</text>
+    <text x="1220" y="63" text-anchor="end" font-size="15" fill="#e4e4e7">9:41</text>
+    <rect x="1148" y="51" width="24" height="12" rx="3" fill="none" stroke="#e4e4e7" stroke-width="1.4"/>
+    <rect x="1151" y="54" width="15" height="6" rx="1" fill="#e4e4e7"/>
+
+    <g class="menu">
+      <rect x="720" y="84" width="480" height="652" rx="10" fill="#26262b" fill-opacity=".97" stroke="#ffffff" stroke-opacity=".14" filter="url(#shadow)"/>
+      <rect class="hover" x="726" y="239" width="468" height="32" rx="6" fill="#0a84ff"/>
+      <rect class="flash" x="726" y="239" width="468" height="32" rx="6" fill="#34d399" fill-opacity=".35"/>
+      <text x="746" y="114.0" font-size="17" font-weight="700" fill="#f4f4f5">Factory 切号器</text><rect x="730" y="129" width="460" height="1" fill="#ffffff" fill-opacity=".13"/><text x="746" y="157.0" font-size="17" fill="#f4f4f5">工作账号</text><text x="762" y="184.0" font-size="14.5" fill="#a1a1aa">me@work.example</text><text x="762" y="208.0" font-size="14.5" fill="#a1a1aa">5小时：剩余 63% · 周：剩余 80% · 月：剩余 91%</text><text x="762" y="232.0" font-size="14.5" fill="#a1a1aa">查询于 21:40</text><text x="746" y="261.0" font-size="17" fill="#f4f4f5">个人账号</text><text x="762" y="288.0" font-size="14.5" fill="#a1a1aa">me@personal.example</text><text x="762" y="312.0" font-size="14.5" fill="#a1a1aa">5小时：剩余 100% · 周：剩余 74% · 月：剩余 88%</text><text x="762" y="336.0" font-size="14.5" fill="#a1a1aa">查询于 21:40</text><rect x="730" y="348" width="460" height="1" fill="#ffffff" fill-opacity=".13"/><text x="746" y="376.0" font-size="17" fill="#f4f4f5">保存 / 同步当前账号</text><text x="746" y="408.0" font-size="17" fill="#f4f4f5">添加账号（官方登录）…</text><text x="746" y="440.0" font-size="17" fill="#f4f4f5">刷新所有账号额度</text><rect x="730" y="455" width="460" height="1" fill="#ffffff" fill-opacity=".13"/><text x="746" y="483.0" font-size="17" fill="#f4f4f5">共享所选会话（先备份）</text><text x="746" y="515.0" font-size="17" fill="#f4f4f5">选择要共享的会话…（0）</text><text x="746" y="547.0" font-size="17" fill="#f4f4f5">设置</text><path d="M1174 536.0l5 5-5 5" fill="none" stroke="#d4d4d8" stroke-width="1.8" stroke-linecap="round"/><text x="746" y="579.0" font-size="17" fill="#f4f4f5">管理账号</text><path d="M1174 568.0l5 5-5 5" fill="none" stroke="#d4d4d8" stroke-width="1.8" stroke-linecap="round"/><text x="746" y="611.0" font-size="17" fill="#f4f4f5">备份与恢复</text><path d="M1174 600.0l5 5-5 5" fill="none" stroke="#d4d4d8" stroke-width="1.8" stroke-linecap="round"/><rect x="730" y="626" width="460" height="1" fill="#ffffff" fill-opacity=".13"/><text x="746" y="654.0" font-size="17" fill="#f4f4f5">打开 Factory</text><text x="746" y="686.0" font-size="17" fill="#f4f4f5">使用说明…</text><text x="746" y="718.0" font-size="17" fill="#f4f4f5">退出切号器</text>
+      <path class="chkA" d="M729 151l4 4.5 7-9" fill="none" stroke="#f4f4f5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      <path class="chkB" d="M729 255l4 4.5 7-9" fill="none" stroke="#f4f4f5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+
+    <g class="dlg">
+      <rect x="685.0" y="250" width="470" height="290" rx="14" fill="#2c2c31" stroke="#ffffff" stroke-opacity=".14" filter="url(#shadow)"/>
+      <rect x="709.0" y="274" width="48" height="48" rx="11" fill="#8b5cf6"/>
+      <text x="733.0" y="305" text-anchor="middle" font-size="18" font-weight="800" fill="#fff">FS</text>
+      <text x="773.0" y="305" font-size="19" font-weight="700" fill="#f4f4f5">切换账号并重启 Factory？</text>
+      <text x="709.0" y="354" font-size="15" fill="#f4f4f5">目标：个人账号</text>
+      <text x="709.0" y="386" font-size="14.5" fill="#a1a1aa">工具会正常退出并重新打开 Factory。正在运行的任务</text>
+      <text x="709.0" y="410" font-size="14.5" fill="#a1a1aa">会中断，请先保存工作。当前登录会保存；切换失败时</text>
+      <text x="709.0" y="434" font-size="14.5" fill="#a1a1aa">会回滚。终端中的 Droid 需要先关闭。</text>
+      <rect x="899.0" y="476" width="110" height="40" rx="8" fill="#ffffff" fill-opacity=".12"/>
+      <text x="954.0" y="502" text-anchor="middle" font-size="16" fill="#f4f4f5">取消</text>
+      <rect class="btn" x="1021.0" y="476" width="110" height="40" rx="8" fill="#0a84ff"/>
+      <text x="1076.0" y="502" text-anchor="middle" font-size="16" font-weight="600" fill="#ffffff">切换</text>
+    </g>
+
+    <g class="prog">
+      <rect x="700.0" y="240" width="440" height="294" rx="16" fill="#18181b" fill-opacity=".92" stroke="#a78bfa" stroke-opacity=".45" filter="url(#shadow)"/>
+      <text x="724.0" y="280" font-size="15" font-weight="700" letter-spacing="1" fill="#c4b5fd">UNDER THE HOOD · 幕后发生的事</text>
+      <g>
+  <circle cx="740.0" cy="326" r="13" fill="none" stroke="#ffffff" stroke-opacity=".18" stroke-width="2.5"/>
+  <g class="ps0"><g class="spin" style="transform-origin:740.0px 326px"><path d="M740.0 313a13 13 0 0 1 13 13" fill="none" stroke="#a78bfa" stroke-width="2.5" stroke-linecap="round"/></g></g>
+  <g class="pk0" style="transform-origin:740.0px 326px"><circle cx="740.0" cy="326" r="13" fill="#10b981"/><path d="M734.0 326l4 4.5 8-9" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></g>
+  <text x="768.0" y="332" font-size="18" fill="#f4f4f5">正常退出 Factory</text>
+  <text x="1116.0" y="332" text-anchor="end" font-size="15" fill="#a1a1aa">Graceful quit</text>
+</g><g>
+  <circle cx="740.0" cy="382" r="13" fill="none" stroke="#ffffff" stroke-opacity=".18" stroke-width="2.5"/>
+  <g class="ps1"><g class="spin" style="transform-origin:740.0px 382px"><path d="M740.0 369a13 13 0 0 1 13 13" fill="none" stroke="#a78bfa" stroke-width="2.5" stroke-linecap="round"/></g></g>
+  <g class="pk1" style="transform-origin:740.0px 382px"><circle cx="740.0" cy="382" r="13" fill="#10b981"/><path d="M734.0 382l4 4.5 8-9" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></g>
+  <text x="768.0" y="388" font-size="18" fill="#f4f4f5">保存最新登录并备份</text>
+  <text x="1116.0" y="388" text-anchor="end" font-size="15" fill="#a1a1aa">Sync &amp; back up</text>
+</g><g>
+  <circle cx="740.0" cy="438" r="13" fill="none" stroke="#ffffff" stroke-opacity=".18" stroke-width="2.5"/>
+  <g class="ps2"><g class="spin" style="transform-origin:740.0px 438px"><path d="M740.0 425a13 13 0 0 1 13 13" fill="none" stroke="#a78bfa" stroke-width="2.5" stroke-linecap="round"/></g></g>
+  <g class="pk2" style="transform-origin:740.0px 438px"><circle cx="740.0" cy="438" r="13" fill="#10b981"/><path d="M734.0 438l4 4.5 8-9" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></g>
+  <text x="768.0" y="444" font-size="18" fill="#f4f4f5">替换加密登录</text>
+  <text x="1116.0" y="444" text-anchor="end" font-size="15" fill="#a1a1aa">Swap encrypted login</text>
+</g><g>
+  <circle cx="740.0" cy="494" r="13" fill="none" stroke="#ffffff" stroke-opacity=".18" stroke-width="2.5"/>
+  <g class="ps3"><g class="spin" style="transform-origin:740.0px 494px"><path d="M740.0 481a13 13 0 0 1 13 13" fill="none" stroke="#a78bfa" stroke-width="2.5" stroke-linecap="round"/></g></g>
+  <g class="pk3" style="transform-origin:740.0px 494px"><circle cx="740.0" cy="494" r="13" fill="#10b981"/><path d="M734.0 494l4 4.5 8-9" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></g>
+  <text x="768.0" y="500" font-size="18" fill="#f4f4f5">重新打开 Factory</text>
+  <text x="1116.0" y="500" text-anchor="end" font-size="15" fill="#a1a1aa">Relaunch</text>
+</g>
+    </g>
+
+    <g class="cursor">
+      <g class="click"><circle cx="0" cy="0" r="16" fill="none" stroke="#ffffff" stroke-width="2.5"/></g>
+      <path d="M0 0v22l5.5-5.2 3.6 8.4 3.9-1.7-3.6-8.2h7.6z" fill="#111" stroke="#fff" stroke-width="1.6" stroke-linejoin="round"/>
+    </g>
+  </g>
+  <rect x="600" y="40" width="640" height="740" rx="16" fill="none" stroke="#ffffff" stroke-opacity=".14"/>
+  <text x="1240" y="806" text-anchor="end" font-size="13" fill="#64748b">Illustration based on the real menu (UI: Simplified Chinese) · 界面示意</text>
+</g>
+</svg>
