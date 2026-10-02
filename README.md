@@ -189,9 +189,13 @@ Swift/AppKit implementation with no bundled code or binaries from that project �
 
 [MIT](LICENSE) © 2026 lhfer. "Factory" and "Droid" belong to their respective owners.
 
-<div align="center">
-<br>
-<sub>If this saves you a few logins a day, a ⭐ helps other Factory users find it.</sub>
-<br><br>
-<a href="https://star-history.com/#lhfer/factory-switcher&Date"><img src="https://api.star-history.com/svg?repos=lhfer/factory-switcher&type=Date" alt="Star history" width="560"></a>
-</div>
+
+## Star History
+
+<a href="https://www.star-history.com/?type=date&repos=lhfer%2Ffactory-switcher">
+ <picture>
+   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/chart?repos=lhfer/factory-switcher&type=date&theme=dark&legend=top-left" />
+   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/chart?repos=lhfer/factory-switcher&type=date&legend=top-left" />
+   <img alt="Star History Chart" src="https://api.star-history.com/chart?repos=lhfer/factory-switcher&type=date&legend=top-left" />
+ </picture>
+</a>
